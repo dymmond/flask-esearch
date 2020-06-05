@@ -55,6 +55,7 @@ setup(
     version=find_version("src/flask_esearch/__init__.py"),
     url='https://github.com/dymmond/flask-esearch',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     license='MIT',
     author='Tiago Silva & Pedro Correia',
     author_email='mail@tiagoasilva.com',
