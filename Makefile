@@ -12,3 +12,6 @@ publish-pypi-test:
 
 publish-pypi-live:
 	twine upload dist/*
+
+bumpversion-minor:
+	bumpversion --current-version $(version) minor src/__init__.py

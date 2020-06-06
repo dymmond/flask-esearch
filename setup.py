@@ -52,7 +52,7 @@ def read(fname):
 
 setup(
     name='Flask-ESearch',
-    version=find_version("src/flask_esearch/__init__.py"),
+    version=find_version("src/__init__.py"),
     url='https://github.com/dymmond/flask-esearch',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',

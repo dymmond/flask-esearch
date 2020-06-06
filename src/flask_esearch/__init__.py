@@ -1,11 +1,6 @@
-from distutils.version import LooseVersion
-
 from elasticsearch import Elasticsearch
 from flask import Flask
 from flask import _app_ctx_stack as stack
-
-__version__ = "0.1.0"
-__version_info__ = tuple(LooseVersion(__version__).version)
 
 
 class ESearch:
