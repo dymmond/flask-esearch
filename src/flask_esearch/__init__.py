@@ -14,9 +14,9 @@ class ESearch:
         self.app = app
         self.options = options
         if app is not None:
-            self.init_app(self.app)
+            self.init_app(self.app, **self.options)
 
-    def init_app(self, app: Flask) -> None:
+    def init_app(self, app: Flask, **options) -> None:
         """
         Initializes the application with the extension.
         Creates and loads the settings from the settings configuration
@@ -32,6 +32,8 @@ class ESearch:
         """
         app.config.setdefault('ELASTICSEARCH_HOST', 'localhost:9200')
         app.config.setdefault('ELASTICSEARCH_HTTP_AUTH', None)
+
+        self.options = options
 
         app.teardown_appcontext(self.teardown)
 
