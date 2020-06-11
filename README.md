@@ -40,7 +40,7 @@ This is a Flask extension proving simple integration with Elasticsearch using py
         }
         try:
             res = es.index(index="test-index", id=1, body=doc)
-            return make_response(print(res['result']), 200)
+            return make_response(res['result'], 200)
         except Exception:
             res = es.get(index="test-index", id=1)
             return make_response(res['_source'], 200)
