@@ -68,8 +68,8 @@ setup(
     platforms='any',
     install_requires=[
         'Flask>=1.1.2',
-        'Elasticsearch>=6.4.6,<=7.7.1',
-        'Elasticsearch-dsl>=6.4.6,<=7.2.1'
+        'Elasticsearch>=6.4.6',
+        'Elasticsearch-dsl>=6.4.6'
     ],
     classifiers=[
         'Framework :: Flask',
