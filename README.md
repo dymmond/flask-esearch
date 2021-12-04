@@ -5,8 +5,8 @@ This is a Flask extension proving simple integration with Elasticsearch using py
 ## Requirements
 
  1. Flask >= 1.XXX
- 2. Elasticsearch>=6.4.6, <=7.7.1
- 3. Python 3.6 or later
+ 2. Elasticsearch>=6.4.6
+ 3. Python >= 3.7
 
 ## How to use
 
