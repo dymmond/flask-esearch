@@ -6,16 +6,17 @@ Flask-ESearch
 Extension for Flask and ElasticSearch.
 """
 import os
-import sys
 import re
-from setuptools import setup, find_packages
+import sys
+
+from setuptools import find_packages, setup
 
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-if sys.argv[-1] == 'publish':
+if sys.argv[-1] == "publish":
     try:
         import wheel
 
@@ -23,8 +24,8 @@ if sys.argv[-1] == 'publish':
     except ImportError:
         print('Wheel library missing. Please run "pip install wheel"')
         sys.exit()
-    os.system('python setup.py sdist upload')
-    os.system('python setup.py bdist_wheel upload')
+    os.system("python setup.py sdist upload")
+    os.system("python setup.py bdist_wheel upload")
     sys.exit()
 
 
@@ -50,38 +51,36 @@ def read(fname):
         content = fp.read()
     return content
 
+
 setup(
-    name='Flask-ESearch',
+    name="Flask-ESearch",
     version=find_version("src/__init__.py"),
-    url='https://github.com/dymmond/flask-esearch',
-    long_description=read('README.md'),
-    long_description_content_type='text/markdown',
-    license='MIT',
-    author='Tiago Silva & Pedro Correia',
-    author_email='mail@tiagoasilva.com',
-    description='Extension of Elasticsearch for Flask with a simple integration',
-    py_modules=['flask_esearch'],
+    url="https://github.com/dymmond/flask-esearch",
+    long_description=read("README.md"),
+    long_description_content_type="text/markdown",
+    license="MIT",
+    author="Tiago Silva",
+    author_email="tiago.silva@dymmond.com",
+    description="Extension of Elasticsearch for Flask with a simple integration",
+    py_modules=["flask_esearch"],
     packages=find_packages("src"),
     package_dir={"": "src"},
     zip_safe=False,
     include_package_data=True,
-    platforms='any',
-    install_requires=[
-        'Flask>=2.3.0',
-        'Elasticsearch>=6.4.6',
-        'Elasticsearch-dsl>=6.4.6'
-    ],
+    platforms="any",
+    install_requires=["Flask>=2.3.0", "Elasticsearch>=6.4.6", "Elasticsearch-dsl>=6.4.6"],
     classifiers=[
-        'Framework :: Flask',
-        'Environment :: Web Environment',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-        'Programming Language :: Python :: 3.10',
-        'Programming Language :: Python :: 3.11',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+        "Framework :: Flask",
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
 )
