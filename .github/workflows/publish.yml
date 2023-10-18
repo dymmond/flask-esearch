@@ -22,7 +22,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: pip install build twine
       - name: "Build package"
-        run: python setup.py clean --all bdist_wheel
+        run: python -m build
       - name: "Publish to PyPI"
         run: twine upload dist/*
         env:
